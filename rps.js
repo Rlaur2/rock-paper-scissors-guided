@@ -11,15 +11,17 @@ let computerPlay = () => {
    return aiChoice
 }
 
+let computerSelection;
 //The actual RPS game is played here after invoking the computerPlay function
-let round = (playerChoice,computerPlay) => {
-    if (playerChoice === 'Rock' && computerPlay === 'Scissors' || playerChoice === 'Paper' && computerPlay === 'Rock' || playerChoice === 'Scissors' && computerPlay === 'Paper') {
-        console.log(`You chose ${playerChoice} and your opponent chose ${computerPlay}. You win!`);
+let round = (playerChoice,computerSelection) => {
+    computerSelection = computerPlay();
+    if (playerChoice === 'Rock' && computerSelection === 'Scissors' || playerChoice === 'Paper' && computerSelection === 'Rock' || playerChoice === 'Scissors' && computerSelection === 'Paper') {
+        console.log(`You chose ${playerChoice} and your opponent chose ${computerSelection}. You win!`);
         result = 'win';
-    } else if (playerChoice === 'Rock' && computerPlay === 'Paper' || playerChoice === 'Paper' && computerPlay === 'Scissors' || playerChoice === 'Scissors' && computerPlay === 'Rock') {
-        console.log(`You chose ${playerChoice} and your opponent chose ${computerPlay}. You lose!`);
+    } else if (playerChoice === 'Rock' && computerSelection === 'Paper' || playerChoice === 'Paper' && computerSelection === 'Scissors' || playerChoice === 'Scissors' && computerSelection === 'Rock') {
+        console.log(`You chose ${playerChoice} and your opponent chose ${computerSelection}. You lose!`);
         result = 'loss';
-    } else if (playerChoice === computerPlay) {
+    } else if (playerChoice === computerSelection) {
         console.log(`Both you and your opponent chose ${playerChoice}. It's a tie!`);
         result = 'tie';
     } else {
@@ -27,4 +29,7 @@ let round = (playerChoice,computerPlay) => {
         //In the future I might have to put an if statement here saying 'if play count > 0 then substract one' or something similar.
         //or alternatively, all of these if statements can increase play count except for this last one.
     }
+    return result;
 }
+
+

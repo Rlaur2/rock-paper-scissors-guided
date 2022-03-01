@@ -16,19 +16,20 @@ let computerSelection;
 let round = (playerChoice,computerSelection) => {
     computerSelection = computerPlay();
     if (playerChoice === 'Rock' && computerSelection === 'Scissors' || playerChoice === 'Paper' && computerSelection === 'Rock' || playerChoice === 'Scissors' && computerSelection === 'Paper') {
-        console.log(`You chose ${playerChoice} and your opponent chose ${computerSelection}. You win!`);
         result = 'win';
+        console.log(`You chose ${playerChoice} and your opponent chose ${computerSelection}. You win!`);
+        
     } else if (playerChoice === 'Rock' && computerSelection === 'Paper' || playerChoice === 'Paper' && computerSelection === 'Scissors' || playerChoice === 'Scissors' && computerSelection === 'Rock') {
-        console.log(`You chose ${playerChoice} and your opponent chose ${computerSelection}. You lose!`);
         result = 'loss';
+        console.log(`You chose ${playerChoice} and your opponent chose ${computerSelection}. You lose!`);
     } else if (playerChoice === computerSelection) {
-        console.log(`Both you and your opponent chose ${playerChoice}. It's a tie!`);
         result = 'tie';
+        console.log(`Both you and your opponent chose ${playerChoice}. It's a tie!`);       
     } else {
+        result = null;
         console.log('Pick between "Rock","Paper", or "Scissors"!')
         //In the future I might have to put an if statement here saying 'if play count > 0 then substract one' or something similar.
         //or alternatively, all of these if statements can increase play count except for this last one.
-        result = null;
     }
     return result;
 }
@@ -44,10 +45,28 @@ let caseFix = (word) => {
 
 //The full game code here that plays 5 times and states the winner 
 //I want to include a condition that if round === null then substract 1 from i (if i > 0) but I'm not sure how to do that.
+
 let game = () => {
-    for (let i = 0; i < 5; i++) {
+    let result = 0;
+    for (let i = 1; i <= 5; i++) {
+        console.log(`Round: ${i}`)
         playerChoice = prompt('Choose between "Rock, Paper, or Scissors"');
         playerChoice = caseFix(playerChoice);
-        round(playerChoice,computerSelection);
-    }
-}
+        let play = round(playerChoice,computerSelection);
+        if (play === 'win') {
+             result++;
+        } else if (play === 'loss') {
+            result--;
+            //the two else statements below are probably unnecessary
+        } else if (play === 'tie') {
+            result += 0;
+        } else {
+            result += 0;
+        }} if (result > 0) {
+            alert('You\'ve won the set! Congrats!');
+        } else if (result < 0) {
+            alert('You\'ve lost the set! Too bad loser!');
+        } else {
+            alert('Tie game!');
+        }}
+    

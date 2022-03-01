@@ -43,7 +43,9 @@ let caseFix = (word) => {
 
 //The full game code here that plays 5 times and states the winner 
 let game = () => {
-    let result = 0;
+    let winCount = 0;
+    let lossCount = 0;
+    let tieCount = 0;
     for (let i = 1; i <= 5; i++) {
         console.log(`Round: ${i}`)
         playerChoice = prompt('Choose between "Rock, Paper, or Scissors"');
@@ -52,19 +54,19 @@ let game = () => {
         if (play === null) {
             i--;
         } else if (play === 'win') {
-             result++;
+             winCount++;
         } else if (play === 'loss') {
-            result--;
-            //the two else statements below are probably unnecessary
+            lossCount++;            
         } else if (play === 'tie') {
-            result += 0;
-        } else {
-            result += 0;
-        }} if (result > 0) {
-            alert('You\'ve won the set! Congrats!');
-        } else if (result < 0) {
+            tieCount++;
+        }} if (winCount > lossCount) {
+            alert(`You won ${winCount} time(s), you loss ${lossCount} time(s), and you tied ${tieCount} time(s).`);
+            alert('Congratulations you\'ve won the set!')
+        } else if (lossCount > winCount) {
+            alert(`You won ${winCount} time(s), you loss ${lossCount} time(s), and you tied ${tieCount} time(s).`);
             alert('You\'ve lost the set! Too bad loser!');
-        } else {
+        } else if (winCount === lossCount) {
+            alert(`You won ${winCount} time(s), you loss ${lossCount} time(s), and you tied ${tieCount} time(s).`);
             alert('Tie game!');
         }}
     

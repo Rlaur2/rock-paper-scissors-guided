@@ -1,4 +1,4 @@
-let computerPlay = (playerChoice) => {
+let computerPlay = () => {
     //Code to randomly choose between Rock, paper, or scissors
     let rng = Math.floor(Math.random()*3);
    if (rng === 0) {

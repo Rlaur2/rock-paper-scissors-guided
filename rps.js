@@ -40,7 +40,7 @@ let caseFix = (word) => {
     return final;
 }
 
-
+console.log('Type "game()" without the quotes to start the 5 round game of Rock, Paper, Scissors!')
 //The full game code here that plays 5 times and states the winner 
 let game = () => {
     let winCount = 0;

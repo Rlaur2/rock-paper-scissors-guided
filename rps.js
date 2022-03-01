@@ -28,8 +28,6 @@ let round = (playerChoice,computerSelection) => {
     } else {
         result = null;
         console.log('Pick between "Rock","Paper", or "Scissors"!')
-        //In the future I might have to put an if statement here saying 'if play count > 0 then substract one' or something similar.
-        //or alternatively, all of these if statements can increase play count except for this last one.
     }
     return result;
 }
@@ -44,8 +42,6 @@ let caseFix = (word) => {
 
 
 //The full game code here that plays 5 times and states the winner 
-//I want to include a condition that if round === null then substract 1 from i (if i > 0) but I'm not sure how to do that.
-
 let game = () => {
     let result = 0;
     for (let i = 1; i <= 5; i++) {
@@ -53,7 +49,9 @@ let game = () => {
         playerChoice = prompt('Choose between "Rock, Paper, or Scissors"');
         playerChoice = caseFix(playerChoice);
         let play = round(playerChoice,computerSelection);
-        if (play === 'win') {
+        if (play === null) {
+            i--;
+        } else if (play === 'win') {
              result++;
         } else if (play === 'loss') {
             result--;

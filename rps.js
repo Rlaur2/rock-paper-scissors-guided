@@ -89,6 +89,7 @@ const resetGame = () => {
     scissorButton.addEventListener('click',battle);
     playerImage.src = '';
     opponentImage.src = '';
+    buttonToggle();
 };
 
 //Function to end game and remove listeners from buttons
@@ -103,8 +104,19 @@ const endGame = () => {
     rockButton.removeEventListener('click',battle);
     paperButton.removeEventListener('click',battle);
     scissorButton.removeEventListener('click',battle);
-    nextGameButton.addEventListener('click',resetGame);    
+    nextGameButton.addEventListener('click',resetGame);
+    buttonToggle();
 };
+
+//Function that switches the CSS of the buttons at end of game
+const buttonToggle = () => {
+    rockButton.classList.toggle('rock-button');
+    rockButton.classList.toggle('rock-end');
+    paperButton.classList.toggle('paper-button');
+    paperButton.classList.toggle('paper-end');
+    scissorButton.classList.toggle('scissor-button');
+    scissorButton.classList.toggle('scissor-end');
+}
 
 rockButton.addEventListener('click',battle);
 paperButton.addEventListener('click',battle);

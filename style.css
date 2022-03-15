@@ -121,15 +121,15 @@
     height: 80px;   
 }
 
-.rock-button {
+.rock-button,.rock-end {
     outline: 2px solid #f6644d;
 }
 
-.paper-button {
+.paper-button,.paper-end {
     outline: 2px solid #60bcb9;
 }
 
-.scissor-button {
+.scissor-button,.scissor-end {
     outline: 2px solid #f6b818;
 }
 

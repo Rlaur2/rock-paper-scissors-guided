@@ -21,7 +21,7 @@
     justify-content: center;
 }
 
-.next-round {
+.next-game {
     font-size: 2em;
     background-color: orange;
     width: 13rem;
@@ -31,7 +31,7 @@
     margin-bottom: 33px;
 }
 
-.next-round:hover {
+.next-game:hover {
     background-color: rgb(255, 178, 36);
 }
 

@@ -3,6 +3,10 @@
     
 }
 
+.header {
+    height: 220px;
+}
+
 .announce {
     display: flex;
     justify-content: center;
@@ -24,12 +28,13 @@
     display: flex;
     justify-content: center;
     border-radius: 4%;
+    margin-bottom: 33px;
 }
 
 .battle-container {
     display: flex;
     justify-content: center;
-    margin-top: 2em;
+    
 }
 
 .images {
@@ -41,12 +46,80 @@
 .battle-arena {
     border: 5px solid black;
     width: 1050px;
-    min-height: 30vh;
+    min-height: 20vh;
 }
 
-.player-image, .opponent-image {
+.images div {
     width: 500px;
     height: 155px;
 }
 
+.indicators {
+    display: flex;
+}
+
+.player-ind,.opponent-ind {
+    display: flex;
+    width: 500px;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.VS {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    font-size: 3em;
+    color: red;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.scores {
+    display: flex;
+    align-items:flex-end;
+    height: 50px;
+}
+
+.player-score-title,.opponent-score-title {
+    display: flex;
+    width: 500px;
+    justify-content: center;
+}
+
+.weapon-header {
+    display: flex;
+    justify-content: center;
+    font-size: 3.5em;
+    margin-top: 15px;
+    height: 65px;
+}
+
+.selection-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.7em;
+}
+
+.selection {
+    display: flex;
+    justify-content: space-around;
+    width: 1050px;
+}
+
+.selection img {
+    width: 250px;
+    height: 80px;   
+}
+
+.rock-button {
+    border: 2px solid #f6644d;
+}
+
+.paper-button {
+    border: 2px solid #60bcb9;
+}
+
+.scissor-button {
+    border: 2px solid #f6b818;
+}
 

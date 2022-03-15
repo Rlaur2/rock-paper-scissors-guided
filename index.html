@@ -9,31 +9,34 @@
     <script src='rps.js' defer></script>
 </head>
 <body>
-    <div class="announce">Opponent wins!</div>
-    <div class="next-container">
-        <div class="next-round">Next round!</div>
-    </div>
+    <div class="header">
+        <div class="announce"></div>
+        <div class="next-container">
+            <div class="next-round"></div>
+        </div>
+    </div>    
     <div class="battle-container">
         <div class="battle-arena">
             <div class="images">
-                <img class="player-image">
-                <img class="opponent-image">
+                <div><img class="player-image"></div>
+                <div><img class="opponent-image"></div>
             </div>
-            <div></div>
+            <div class="indicators"><span class="player-ind">Player</span> <span class="VS">VS</span> <span class="opponent-ind">Opponent</span></div>
             <div class="scores">
-                <div>Player wins: <span class="player-score">0</span></div>
-                <div>Ties: <span class="ties">0</span></div>
-                <div>Opponent wins: <span class="opponent-score">0</span></div>
+                <div class="player-score-title"><div></div>Player wins: <span class="player-score">0</span></div>
+                <div class="tie-title">Ties: <span class="ties">0</span></div>
+                <div class="opponent-score-title">Opponent wins: <span class="opponent-score">0</span></div>
             </div>
         </div>
     </div>
     <div class="weapon-header">Choose your weapon!</div>
-    <div class="selection">
-        <div class="rock-button"><img class="img-button" src="./rpsImages/rock.png"></div>
-        <div class="paper-button"><img class="img-button" src="./rpsImages/paper.png"></div>
-        <div class="scissor-button"><img class="img-button" src="./rpsImages/scissors.png"></div>
+    <div class="selection-container">
+        <div class="selection">
+            <div class="rock-button"><img class="img-button" src="./rpsImages/rock.png"></div>
+            <div class="paper-button"><img class="img-button" src="./rpsImages/paper.png"></div>
+            <div class="scissor-button"><img class="img-button" src="./rpsImages/scissors.png"></div>
+        </div>
     </div>
-    
 </body>
 
 </html>

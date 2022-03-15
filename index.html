@@ -6,9 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel='stylesheet' href='style.css'>
+    <script src='rps.js' defer></script>
 </head>
 <body>
+    <div class="announce">Opponent wins!</div>
+    <div class="next-container">
+        <div class="next-round">Next round!</div>
+    </div>
+    <div class="battle-container">
+        <div class="battle-arena">
+            <div class="images">
+                <img class="player-image">
+                <img class="opponent-image">
+            </div>
+            <div></div>
+            <div class="scores">
+                <div>Player wins: <span class="player-score">0</span></div>
+                <div>Ties: <span class="ties">0</span></div>
+                <div>Opponent wins: <span class="opponent-score">0</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="weapon-header">Choose your weapon!</div>
+    <div class="selection">
+        <div class="rock-button"><img class="img-button" src="./rpsImages/rock.png"></div>
+        <div class="paper-button"><img class="img-button" src="./rpsImages/paper.png"></div>
+        <div class="scissor-button"><img class="img-button" src="./rpsImages/scissors.png"></div>
+    </div>
     
 </body>
-<script src='rps.js'></script>
+
 </html>

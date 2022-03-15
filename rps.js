@@ -40,33 +40,6 @@ let caseFix = (word) => {
     return final;
 }
 
-console.log('Type "playRPS()" without the quotes to start the 5 round game of Rock, Paper, Scissors!')
-//The full game code here that plays 5 times and states the winner 
-let playRPS = () => {
-    let winCount = 0;
-    let lossCount = 0;
-    let tieCount = 0;
-    for (let i = 1; i <= 5; i++) {
-        console.log(`Round: ${i}`)
-        playerChoice = prompt('Choose between "Rock, Paper, or Scissors"');
-        playerChoice = caseFix(playerChoice);
-        let round = battle(playerChoice,computerSelection);
-        if (round === null) {
-            i--;
-        } else if (round === 'win') {
-             winCount++;
-        } else if (round === 'loss') {
-            lossCount++;            
-        } else if (round === 'tie') {
-            tieCount++;
-        }} if (winCount > lossCount) {
-            alert(`You won ${winCount} time(s), you loss ${lossCount} time(s), and you tied ${tieCount} time(s).`);
-            alert('Congratulations you\'ve won the set!')
-        } else if (winCount < lossCount) {
-            alert(`You won ${winCount} time(s), you loss ${lossCount} time(s), and you tied ${tieCount} time(s).`);
-            alert('You\'ve lost the set! Too bad loser!');
-        } else if (winCount === lossCount) {
-            alert(`You won ${winCount} time(s), you loss ${lossCount} time(s), and you tied ${tieCount} time(s).`);
-            alert('Tie game!');
-        }}
+
+
     

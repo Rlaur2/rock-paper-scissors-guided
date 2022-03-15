@@ -90,6 +90,8 @@ const resetGame = () => {
     playerImage.src = '';
     opponentImage.src = '';
     buttonToggle();
+    nextGameButton.textContent = '';
+    nextGameButton.removeEventListener('click',resetGame);
 };
 
 //Function to end game and remove listeners from buttons
